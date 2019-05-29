@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import MdInput from './Md/MdInput.js';
-import MdOutput from './Md/MdOutput.js';
+import MdInput from './Md/MdInput';
+import MdOutput from './Md/MdOutput';
+import Styler from './Styler/Styler';
 
 const initialSource = `
 # Live demo
@@ -57,8 +58,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MdInput value={this.state.markDown} changed={this.handleInput}></MdInput>
-        <MdOutput value={this.state.markDown}></MdOutput>
+        <div className='md-wrapper'>
+          <MdInput value={this.state.markDown} changed={this.handleInput}></MdInput>
+          <MdOutput value={this.state.markDown}></MdOutput>
+        </div>
+        <Styler></Styler>
       </div>
     );
   }

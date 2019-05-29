@@ -1,19 +1,38 @@
-body {
-  background-color: #282c34;
-  color: white;
+:root {
+  --main-font-color: #333;
+  --secondary-font-color: #444; 
 }
 
-.App {
+.md-wrapper {
   display: flex;
   justify-content: center;
   height: 100vh;
 }
 
-.App > * {
+.md-wrapper > * {
   width: 50%;
   padding: 10px;
 }
 
 textarea {
   resize: none;
+}
+
+.styler {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.md-output h1,
+.md-output h2,
+.md-output h3,
+.md-output h4,
+.md-output h5 {
+  color: var(--main-font-color, #333);
+}
+
+.md-output p,
+.md-output li {
+  color: var(--secondary-font-color, #444);
 }

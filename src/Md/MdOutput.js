@@ -3,7 +3,7 @@ import Markdown from 'react-markdown';
 
 const MdOutput = props => {
   return (
-    <div>
+    <div className="md-output">
       <Markdown source={props.value}></Markdown>
     </div>
   );
